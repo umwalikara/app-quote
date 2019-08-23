@@ -5,7 +5,7 @@
     <div class="col-md-6">
       <div *ngFor="let quote of quotes;let i=index">
         <div>
-          <h4 id={{i}}>{{quote.name}} due on {{quote.completeDate|date}}</h4>
+          <h6 id={{i}}>{{quote.name}} due on {{quote.completeDate|date}}</h6>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
         </div>
         <div *ngIf='quote.showDescription'>
@@ -14,6 +14,9 @@
           </app-quote-detail>
         </div>
       </div>
+    </div>
+    <div class="col-md-6">
+      <app-quote-form></app-quote-form>
     </div>
   </div>
   <!-- </ul> -->
