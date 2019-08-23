@@ -8,8 +8,8 @@ import{Quote} from './Quote'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Quotes-App';
-  quotes : Quote[] =[
-    {id:1,name:"Umwiza First quote"},
-  ]
+  // title = 'Quotes-App';
+  // quotes : Quote[] =[
+  //   {id:1,name:"Umwiza First quote",description:"Good and Good"},
+  // ]
 }
