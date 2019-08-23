@@ -7,8 +7,16 @@ import{Quote} from '../Quote';
 })
 export class QuoteComponent implements OnInit {
   quotes : Quote[] =[
-    {id:1,name:"Umwiza First quote",description:"Good and Good"},
+  new Quote (1,"Umwiza First quote","Good and Good",new Date(2019,8,23)),
   ];
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+  completeGoal(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit() {
