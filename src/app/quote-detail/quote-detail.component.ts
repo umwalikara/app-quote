@@ -8,8 +8,8 @@ import { Quote } from '../Quote';
 export class QuoteDetailComponent implements OnInit {
    @Input() quote: Quote
    @Output() isDelete = new EventEmitter<boolean>();
-   @Output() quotelike = new EventEmitter<boolean>();
-   @Output() quoteunlike = new EventEmitter<boolean>();
+  //  @Output() quotelike = new EventEmitter<boolean>();
+  //  @Output() quoteunlike = new EventEmitter<boolean>();
 
   // quoteComplete(complete:boolean){
   //   this.isComplete.emit(complete);
@@ -17,11 +17,13 @@ export class QuoteDetailComponent implements OnInit {
   quoteDelete(erase:boolean){
     this.isDelete.emit(erase);
   }
-  quoteupvote(upvote:boolean){
-    this.quotelike.emit(upvote);
+  upvote=0;
+  downvote=0;
+  quoteupvote(){
+    this.upvote++;
   }
-  quotedownvote(downvote:boolean){
-    this.quoteunlike.emit(downvote);
+  quotedownvote(){
+    this.downvote++;
   }
   constructor() { }
 
