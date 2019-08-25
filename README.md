@@ -13,4 +13,4 @@ HTML, CSS, Bootstrap and [Angular CLI](https://github.com/angular/angular-cli) v
 ## Support and contact details
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ### License
-Copyright (c) {2019} **UMWALI Clara**                                   
+Copyright (c) 2019 **UMWALI Clara**                                   
