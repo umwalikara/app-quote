@@ -5,19 +5,9 @@
     <div class="col-md-6">
       <div *ngFor="let quote of quotes;let i=index">
         <div>
-            <!-- <p appHighLight *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.quote}}</p>
-            <p  *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">{{quote.quote}}</p>
-            <button (click)='quoteLike(i)' class="btn btn-danger">Upvote</button>
-            <button (click)='quoteUnlike(i)' class="btn btn-danger">Downvote</button>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-            <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event, i)'>
-            </app-quote-detail> -->
           <h6 id={{i}}>{{quote.name}} due on {{quote.completeDate|date}}</h6>
           <p appHighlight *ngIf="highestUpvote()===quote.upvote && quote.upvote>0">{{quote.name}}</p>
-            <!-- <p  *ngIf="highestUpvote()!==quote.upvote || quote.upvote===0">{{quote.name}}</p> -->
-            <!-- <button (click)='quoteLike(i)' class="btn btn-danger">Upvote</button> -->
-            <!-- <button (click)='quoteUnlike(i)' class="btn btn-danger">Downvote</button> -->
-          <button (click)='toggleDetails(i)' class="btn btn-outline-primary">Toggle Details</button>
+          <button (click)='toggleDetails(i)' class="btn btn-outline-primary">Quote Details</button>
         </div>
         <div *ngIf='quote.showDescription'>
           <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isDelete)='deleteQuote($event,i)'(quotelike)='quotelike($event)'(quoteunlike)='quoteunlike($event)' >
