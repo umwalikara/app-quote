@@ -1,9 +1,8 @@
 <p>Quote: {{quote.description}}</p>
 <p>Author:{{quote.author}}</p>
 <p>This quote will be complete in {{quote.completeDate|time}} days</p>
-<button (click)= "quoteupvote()" class="btn btn-outline-primary btn-sm">UpVote</button><br>
+<button (click)="quoteupvote()" class="btn btn-outline-primary btn-sm">UpVote</button><br>
 <p>{{upvote}}</p>
-<button (click)= "quotedownvote()" class="btn btn-outline-primary btn-sm">DownVote</button><br>
+<button (click)="quotedownvote()" class="btn btn-outline-primary btn-sm">DownVote</button><br>
 <p>{{downvote}}</p>
-<button (click)= "quoteDelete(true)" class="btn btn-outline-danger">Delete Quote</button>
-
+<button (click)="quoteDelete(true)" class="btn btn-outline-danger">Delete Quote</button>
